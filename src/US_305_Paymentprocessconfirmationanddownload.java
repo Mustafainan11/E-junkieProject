@@ -1,3 +1,8 @@
+import org.junit.Assert;
+import org.junit.Test;
+
+import static Utilty.BaseDriver.driver;
+
 public class US_305_Paymentprocessconfirmationanddownload {
 
     @Test
@@ -14,7 +19,6 @@ public class US_305_Paymentprocessconfirmationanddownload {
                 break;
             }
         }
-
 
         WebElement logo = driver.findElement(By.xpath("//a[contains(@href,'https://www.e-junkie.com/')]//img"));
         logo.click();
