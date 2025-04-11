@@ -46,14 +46,13 @@ public class US_304_CreditCardPaymentandConfirmation extends BaseDriver {
         WebElement CVV=driver.findElement(By.xpath("//*[@name='cvc']"));
         CVV.sendKeys("000");
         driver.switchTo().parentFrame();
-
         MyFunc.Wait(5);
+
         WebElement pay=driver.findElement(By.xpath("//button[@class='Pay-Button']"));
         pay.click();
 
         WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(30));
         wait.until(ExpectedConditions.urlContains("https://www.fatfreecartpro.com/"));
         MyFunc.Wait(3);
-
     }
 }
