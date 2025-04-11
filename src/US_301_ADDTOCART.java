@@ -6,13 +6,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class US_301_addtocart extends BaseDriver {
+public class US_301_ADDTOCART extends BaseDriver {
 
     @Test
     public void Test(){
-
         driver.get("https://shopdemo.fatfreeshop.com/?");
-
         WebElement element=driver.findElement(By.cssSelector("[href='/product/1595015/Demo-eBook']>div>div+div"));
 
         WebElement header = element.findElement(By.cssSelector("[href='/product/1595015/Demo-eBook']>div>div+div>h4"));

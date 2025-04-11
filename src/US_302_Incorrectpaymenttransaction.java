@@ -10,7 +10,6 @@ public class US_302_Incorrectpaymenttransaction {
 
     @Test
     public void payNegative() {
-
         driver.get("https://shopdemo.e-junkie.com/");
 
         WebElement addToCartButton = driver.findElement(By.xpath("(//button[@class='view_product'])[2]"));
@@ -21,7 +20,6 @@ public class US_302_Incorrectpaymenttransaction {
         driver.switchTo().frame(iframe);
 
         WebElement product = driver.findElement(By.xpath("(//div[@class='Col2 Product-Desc'])[1]/h5"));
-
 
         Assert.assertEquals("Demo eBook", product.getText());
 
