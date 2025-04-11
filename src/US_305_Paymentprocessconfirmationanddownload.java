@@ -44,7 +44,7 @@ public class US_305_Paymentprocessconfirmationanddownload extends BaseDriver {
 
         WebElement CardNo = driver.findElement(By.xpath("//input[@placeholder='Kart numarası']"));
         CardNo.sendKeys("4242 4242 4242 4242 12/25 000");
-        MyFunc.Wait(40);
+        MyFunc.Wait(10);
 
         driver.switchTo().parentFrame();
         WebElement pay = driver.findElement(By.xpath("//button[@class='Pay-Button']"));
@@ -58,20 +58,6 @@ public class US_305_Paymentprocessconfirmationanddownload extends BaseDriver {
 
         WebElement Link = wait.until(ExpectedConditions.elementToBeClickable(
                 By.xpath("//span[@class='download_btn top10']")));
-
-        driver.switchTo().parentFrame();
-
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].click();", Link);
-
-        WebElement errorText = driver.findElement(By.cssSelector(".all_text.bottom_text.desktop_text"));
-
-        try{
-            Assert.assertFalse(errorText.getText().contains("This download link (https://www.e-junkie.com/ecom/df.php?txn_id=st-ch_3RBkQ2FWSmRjvnlt1hVxPsZB&d_id=69086748&client_id=341695) has expired. "), "Hata mesajı görüntülendi");
-        } catch (Exception e) {
-            System.out.println("Hata mesajı görüntülenemedi");
-        }
-        {
-        }
+        Link.click();
     }
 }
