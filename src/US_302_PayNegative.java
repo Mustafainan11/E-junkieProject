@@ -1,12 +1,12 @@
+import Utilty.BaseDriver;
 import org.junit.Assert;
-import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import static Utilty.BaseDriver.driver;
 
-public class US_302_Incorrectpaymenttransaction {
+public class US_302_PayNegative extends BaseDriver {
 
     @Test
     public void payNegative() {

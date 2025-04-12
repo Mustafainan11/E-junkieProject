@@ -1,16 +1,14 @@
 import Utilty.BaseDriver;
 import Utilty.MyFunc;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class US_305_Paymentprocessconfirmationanddownload extends BaseDriver {
+public class US_305_Download extends BaseDriver {
     @Test
     public void Test01() {
         driver.get("https://shopdemo.fatfreeshop.com/");
