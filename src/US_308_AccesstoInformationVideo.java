@@ -1,5 +1,4 @@
-package Utilty;
-
+import Utilty.BaseDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -10,7 +9,7 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 import java.util.Set;
 
-public class US_308_AccesstoInformationVideo extends BaseDriver{
+public class US_308_AccesstoInformationVideo extends BaseDriver {
     @Test
     public void bilgiVideosunaErisim() throws InterruptedException {
         driver.get("https://www.e-junkie.com/");

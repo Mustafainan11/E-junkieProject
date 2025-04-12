@@ -1,11 +1,10 @@
-package Utilty;
-
+import Utilty.BaseDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class US_302_PayNegative extends BaseDriver{
+public class US_302_PayNegative extends BaseDriver {
     @Test
     public void payNegative() throws InterruptedException {
         driver.get("https://shopdemo.e-junkie.com/");

@@ -1,5 +1,5 @@
-package Utilty;
-
+import Utilty.BaseDriver;
+import Utilty.MyFunc;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class US_304_CreditCardPaymentandConfirmation extends BaseDriver{
+public class US_304_CreditCardPaymentandConfirmation extends BaseDriver {
     @Test
     public void Test1() throws InterruptedException {
         driver.get("https://shopdemo.e-junkie.com/");

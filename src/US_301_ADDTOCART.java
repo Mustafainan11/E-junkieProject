@@ -1,12 +1,12 @@
-package Utilty;
-
+import Utilty.BaseDriver;
+import Utilty.MyFunc;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class US_301_ADDTOCART extends BaseDriver{
+public class US_301_ADDTOCART extends BaseDriver {
     @Test
     public void Test() throws InterruptedException {
         driver.get("https://shopdemo.fatfreeshop.com/?");
