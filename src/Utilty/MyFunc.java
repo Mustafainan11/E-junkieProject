@@ -8,4 +8,5 @@ public class MyFunc {
             throw new RuntimeException(e);
         }
     }
+
 }

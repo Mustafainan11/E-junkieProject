@@ -1,5 +1,5 @@
-import Utilty.BaseDriver;
-import Utilty.MyFunc;
+package Utilty;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -8,9 +8,9 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class US_304_CreditCardPaymentandConfirmation extends BaseDriver {
+public class US_304_CreditCardPaymentandConfirmation extends BaseDriver{
     @Test
-    public void Test1() {
+    public void Test1() throws InterruptedException {
         driver.get("https://shopdemo.e-junkie.com/");
 
         WebElement Book = driver.findElement(By.xpath("(//*[@class='ion-ios-cart cart_icon']) [2]"));
@@ -54,5 +54,8 @@ public class US_304_CreditCardPaymentandConfirmation extends BaseDriver {
         WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(30));
         wait.until(ExpectedConditions.urlContains("https://www.fatfreecartpro.com/"));
         MyFunc.Wait(3);
+
+        TearDown();
     }
+
 }

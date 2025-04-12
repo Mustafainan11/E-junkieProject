@@ -1,4 +1,5 @@
-import Utilty.BaseDriver;
+package Utilty;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -9,12 +10,11 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 import java.util.Set;
 
-public class US_308_AccesstoInformationVideo extends BaseDriver {
+public class US_308_AccesstoInformationVideo extends BaseDriver{
     @Test
     public void bilgiVideosunaErisim() throws InterruptedException {
         driver.get("https://www.e-junkie.com/");
         System.out.println("Sayfa açıldı: " + driver.getCurrentUrl());
-
         Thread.sleep(2000);
 
         WebElement howItWorksBtn = wait.until(ExpectedConditions.elementToBeClickable(
@@ -31,7 +31,6 @@ public class US_308_AccesstoInformationVideo extends BaseDriver {
                 break;
             }
         }
-
         Actions actions = new Actions(driver);
         actions.sendKeys(Keys.TAB).pause(Duration.ofSeconds(1))
                 .sendKeys(Keys.TAB).pause(Duration.ofSeconds(1))
@@ -41,5 +40,8 @@ public class US_308_AccesstoInformationVideo extends BaseDriver {
 
         driver.close();
         driver.switchTo().window(originalWindow);
+
+        TearDown();
     }
+
 }

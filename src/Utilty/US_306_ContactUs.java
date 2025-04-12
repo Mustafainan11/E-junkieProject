@@ -1,16 +1,15 @@
-import Utilty.BaseDriver;
+package Utilty;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class US_306_ContactUs extends BaseDriver {
-
+public class US_306_ContactUs extends BaseDriver{
     @Test
-    public void Test(){
+    public void Test() throws InterruptedException {
 
         driver.get("https://shopdemo.fatfreeshop.com/?");
         Actions actions=new Actions(driver);
@@ -31,5 +30,8 @@ public class US_306_ContactUs extends BaseDriver {
         System.out.println(alertText);
 
         Assert.assertTrue(alertText.equals("Recaptcha didn't match"));
+
+        TearDown();
     }
+
 }

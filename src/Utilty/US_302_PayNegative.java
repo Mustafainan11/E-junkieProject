@@ -1,15 +1,13 @@
-import Utilty.BaseDriver;
-import org.junit.Assert;
-import org.testng.annotations.Test;
+package Utilty;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
-import static Utilty.BaseDriver.driver;
-
-public class US_302_PayNegative extends BaseDriver {
-
+public class US_302_PayNegative extends BaseDriver{
     @Test
-    public void payNegative() {
+    public void payNegative() throws InterruptedException {
         driver.get("https://shopdemo.e-junkie.com/");
 
         WebElement addToCartButton = driver.findElement(By.xpath("(//button[@class='view_product'])[2]"));
@@ -33,5 +31,8 @@ public class US_302_PayNegative extends BaseDriver {
         WebElement messageText = driver.findElement(By.cssSelector("[id='SnackBar']> :nth-child(2)"));
 
         Assert.assertEquals(messageText.getText(), messageBox.getText());
+
+        TearDown();
     }
+
 }

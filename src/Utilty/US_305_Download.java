@@ -1,5 +1,5 @@
-import Utilty.BaseDriver;
-import Utilty.MyFunc;
+package Utilty;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -8,9 +8,9 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class US_305_Download extends BaseDriver {
+public class US_305_Download extends BaseDriver{
     @Test
-    public void Test01() {
+    public void Test01() throws InterruptedException {
         driver.get("https://shopdemo.fatfreeshop.com/");
         MyFunc.Wait(2);
 
@@ -57,5 +57,8 @@ public class US_305_Download extends BaseDriver {
         WebElement Link = wait.until(ExpectedConditions.elementToBeClickable(
                 By.xpath("//span[@class='download_btn top10']")));
         Link.click();
+
+        TearDown();
     }
+
 }

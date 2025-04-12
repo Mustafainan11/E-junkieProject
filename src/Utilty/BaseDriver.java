@@ -1,9 +1,9 @@
 package Utilty;
 
+import org.junit.AfterClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterClass;
 
 import java.time.Duration;
 
@@ -22,4 +22,5 @@ public class BaseDriver {
         MyFunc.Wait(2);
         driver.quit();
     }
+
 }

@@ -1,15 +1,14 @@
-import Utilty.BaseDriver;
-import Utilty.MyFunc;
+package Utilty;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class US_301_ADDTOCART extends BaseDriver {
-
+public class US_301_ADDTOCART extends BaseDriver{
     @Test
-    public void Test(){
+    public void Test() throws InterruptedException {
         driver.get("https://shopdemo.fatfreeshop.com/?");
         WebElement element=driver.findElement(By.cssSelector("[href='/product/1595015/Demo-eBook']>div>div+div"));
 
@@ -38,6 +37,8 @@ public class US_301_ADDTOCART extends BaseDriver {
         bookInTheCart = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".Col2.Product-Desc h5")));
 
         Assert.assertTrue(bookName.equals(bookInTheCart.getText()));
+
+        TearDown();
 
     }
 
