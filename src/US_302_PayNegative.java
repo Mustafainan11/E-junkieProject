@@ -30,8 +30,5 @@ public class US_302_PayNegative extends BaseDriver {
         WebElement messageText = driver.findElement(By.cssSelector("[id='SnackBar']> :nth-child(2)"));
 
         Assert.assertEquals(messageText.getText(), messageBox.getText());
-
-        TearDown();
     }
-
 }
