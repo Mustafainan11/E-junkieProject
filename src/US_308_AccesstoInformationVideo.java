@@ -41,6 +41,7 @@ public class US_308_AccesstoInformationVideo extends BaseDriver {
         driver.switchTo().window(originalWindow);
 
         TearDown();
+        driver.close();
     }
 
 }
