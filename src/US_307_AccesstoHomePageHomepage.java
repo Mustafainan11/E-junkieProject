@@ -22,5 +22,4 @@ public class US_307_AccesstoHomePageHomepage extends BaseDriver {
 
         TearDown();
     }
-
 }
